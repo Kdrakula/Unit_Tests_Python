@@ -1,5 +1,5 @@
 import unittest
-from math.square import square
+from math/square import square
 
 class SquareTest(unittest.TestCase):
     def test_square_positive_number(self):
