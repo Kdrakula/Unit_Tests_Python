@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile.builder
+    image: calculations-builder
+
+  tester:
+    build:
+      context: .
+      dockerfile: Dockerfile.tester
+    image: calculations-tester
+    depends_on:
+      - builder

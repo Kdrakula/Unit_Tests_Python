@@ -1,0 +1,8 @@
+# Dockerfile.tester
+FROM calculations-builder:latest
+
+# Ustawienie katalogu roboczego
+WORKDIR /app
+
+# Uruchomienie testów
+CMD ["python", "-m", "unittest", "discover", "tests"]
